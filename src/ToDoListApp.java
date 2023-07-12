@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class ToDoListApp {
-    private ArrayList<Task> tasks;
+    private final ArrayList<Task> tasks;
 
     public ToDoListApp() {
         tasks = new ArrayList<>();
