@@ -1,4 +1,7 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
+
 public class ToDoListApp {
     private ArrayList<Task> tasks;
 
@@ -31,5 +34,11 @@ public class ToDoListApp {
             System.out.println("Task's description: " + task.getDescription());
             System.out.println("Task's creation date: " + task.getCreation_date());
         }
+    }
+
+    public static void main(String[] args) {
+        ToDoListApp toDoListApp = new ToDoListApp();
+        toDoListApp.addTask(new Task(1, "Zadanie 1.", "Opis zadania:", new Date()));
+        toDoListApp.displayTask();
     }
 }
