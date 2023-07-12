@@ -38,7 +38,25 @@ public class ToDoListApp {
 
     public static void main(String[] args) {
         ToDoListApp toDoListApp = new ToDoListApp();
-        toDoListApp.addTask(new Task(1, "Zadanie 1.", "Opis zadania:", new Date()));
+
+        //example added below
+        Task task = new Task(1, "Zadanie 1.", "Opis zadania:", new Date());
+        toDoListApp.addTask(task); // new Task(1, "Zadanie 1.", "Opis zadania:", new Date()
+
+        //displaying tasks before edits
+        toDoListApp.displayTask();
+
+        //Edit
+        task.setName("New task name");
+        task.setDescription("New task description");
+
+        //display after Edit
+        toDoListApp.displayTask();
+
+        //delete task
+        toDoListApp.deleteTask(task);
+
+        //display task after deletion
         toDoListApp.displayTask();
     }
 }
